@@ -645,6 +645,11 @@ PODS:
   - MotionAnimator (4.0.1):
     - MotionInterchange (~> 3.0)
   - MotionInterchange (3.0.0)
+  - RxCocoa (5.1.3):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.3):
+    - RxSwift (~> 5)
   - RxSwift (5.1.3)
   - SnapKit (5.0.1)
   - SwiftLint (0.44.0)
@@ -652,6 +657,7 @@ PODS:
 DEPENDENCIES:
   - Kingfisher
   - MaterialComponents
+  - RxCocoa
   - RxSwift (~> 5.1.0)
   - SnapKit
   - SwiftLint
@@ -664,6 +670,8 @@ SPEC REPOS:
     - MDFTextAccessibility
     - MotionAnimator
     - MotionInterchange
+    - RxCocoa
+    - RxRelay
     - RxSwift
     - SnapKit
     - SwiftLint
@@ -675,10 +683,12 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   MotionAnimator: 5f99d7c9592928c0f28a66283eda9c3b657dc480
   MotionInterchange: 13adae439b377e31d1674cc165539d50e1d1566a
+  RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
+  RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
   RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: e96c0a8c770c7ebbc4d36c55baf9096bb65c4584
 
-PODFILE CHECKSUM: e21346053e3672227faf17e00ed6b2bf62c51b50
+PODFILE CHECKSUM: 1c7409ab03ce34781f459a6077addf3c321deb5e
 
 COCOAPODS: 1.11.3
