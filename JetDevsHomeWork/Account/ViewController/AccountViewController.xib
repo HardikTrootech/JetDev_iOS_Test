@@ -118,15 +118,38 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVU-BY-1uH">
+                            <rect key="frame" x="30" y="723" width="354" height="50"/>
+                            <color key="backgroundColor" red="0.15686274510000001" green="0.31764705879999999" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="c0c-aa-LqT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="18"/>
+                            <state key="normal" title="Logout">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="6"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="logoutButtonTap:" destination="-1" eventType="touchUpInside" id="ozR-u3-hPa"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Igt-oU-dvM" secondAttribute="trailing" constant="30" id="2DB-KM-V68"/>
+                        <constraint firstAttribute="trailing" secondItem="kVU-BY-1uH" secondAttribute="trailing" constant="30" id="4O8-z6-akZ"/>
                         <constraint firstItem="Igt-oU-dvM" firstAttribute="leading" secondItem="gQk-Rv-H92" secondAttribute="leading" constant="30" id="73D-Hi-5qg"/>
                         <constraint firstItem="g7w-qB-4LN" firstAttribute="top" secondItem="gQk-Rv-H92" secondAttribute="top" constant="80" id="8dU-Lc-QQc"/>
                         <constraint firstItem="UAw-Oc-lPg" firstAttribute="leading" secondItem="gQk-Rv-H92" secondAttribute="leading" constant="24" id="9qV-VE-djH"/>
                         <constraint firstItem="Igt-oU-dvM" firstAttribute="top" secondItem="g7w-qB-4LN" secondAttribute="bottom" constant="16" id="Ash-6s-pYe"/>
+                        <constraint firstAttribute="bottom" secondItem="kVU-BY-1uH" secondAttribute="bottom" constant="45" id="Cd1-kS-dfq"/>
                         <constraint firstAttribute="trailing" secondItem="UAw-Oc-lPg" secondAttribute="trailing" constant="24" id="M2n-PE-85S"/>
+                        <constraint firstItem="kVU-BY-1uH" firstAttribute="leading" secondItem="gQk-Rv-H92" secondAttribute="leading" constant="30" id="MiH-SX-bc4"/>
                         <constraint firstItem="UAw-Oc-lPg" firstAttribute="top" secondItem="Igt-oU-dvM" secondAttribute="bottom" constant="9" id="OtK-xh-FGp"/>
                         <constraint firstItem="g7w-qB-4LN" firstAttribute="centerX" secondItem="gQk-Rv-H92" secondAttribute="centerX" id="zxF-qR-gft"/>
                     </constraints>

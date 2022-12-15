@@ -35,7 +35,7 @@ class LoginViewModel {
     let emailViewModel = EmailViewModel()
     let passwordViewModel = PasswordViewModel()
     
-    let isSuccess: BehaviorRelay<Bool> = BehaviorRelay<Bool>(value: false)
+    let userModel: BehaviorRelay<UserModel?> = BehaviorRelay<UserModel?>(value: nil)
     let isLoading: BehaviorRelay<Bool> = BehaviorRelay<Bool>(value: false)
     let errorMessage: BehaviorRelay<String> = BehaviorRelay<String>(value: "")
     
@@ -46,5 +46,27 @@ class LoginViewModel {
     func loginUser() {
         model.email = emailViewModel.data.value
         model.password = passwordViewModel.data.value
+        let reqParams = [
+            "email": model.email,
+            "password": model.password
+        ]
+        isLoading.accept(true)
+        APIService.call(url: .userLogin, method: .post, parameters: reqParams, onError: { errorMessage in
+            self.isLoading.accept(false)
+            self.errorMessage.accept(errorMessage)
+            print("APIService On Error: \(errorMessage)")
+        }, onSuccess: { data in
+            self.isLoading.accept(false)
+            print("APIService On Success: \(data as? [String: Any])")
+            if let dict = (data as? [String: Any]), let userJson = dict["user"] {
+                if let user = UserService.getUserFromJson(userJson) {
+                    self.userModel.accept(user)
+                } else {
+                    self.errorMessage.accept(errorDefaultMessage)
+                }
+            } else {
+                self.errorMessage.accept(errorDefaultMessage)
+            }
+        })
     }
 }

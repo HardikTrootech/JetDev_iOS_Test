@@ -45,6 +45,12 @@
 		560696A42949DD8400CC2960 /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560696A32949DD8400CC2960 /* EmailViewModel.swift */; };
 		560696A62949DDD200CC2960 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560696A52949DDD200CC2960 /* LoginViewModel.swift */; };
 		560696A82949E1CF00CC2960 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560696A72949E1CF00CC2960 /* PasswordViewModel.swift */; };
+		567B361A294B0AD800BEEE6A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B3619294B0AD800BEEE6A /* UserService.swift */; };
+		567B361D294B26CF00BEEE6A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B361C294B26CF00BEEE6A /* UserViewModel.swift */; };
+		567B3620294B305900BEEE6A /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567B361F294B305900BEEE6A /* Date+Extension.swift */; };
+		56CDCC7A294AE947009B1451 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDCC79294AE947009B1451 /* APIService.swift */; };
+		56CDCC7D294AF424009B1451 /* APIResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDCC7C294AF424009B1451 /* APIResponseModel.swift */; };
+		56CDCC7F294AF42E009B1451 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDCC7E294AF42E009B1451 /* UserModel.swift */; };
 		9EC6505DC386FCB04480F4BB /* Pods_JetDevsHomeWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00AF71BC0DB1CFCDB921924 /* Pods_JetDevsHomeWork.framework */; };
 		9FBC8F0B168679446BE08275 /* Pods_JetDevsHomeWorkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E168756431AD9B671DACC28B /* Pods_JetDevsHomeWorkTests.framework */; };
 		DD9CD5C395D5FAE03F59B68E /* Pods_JetDevsHomeWork_JetDevsHomeWorkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FFF8B3EB514C818C31135B /* Pods_JetDevsHomeWork_JetDevsHomeWorkUITests.framework */; };
@@ -115,6 +121,12 @@
 		560696A32949DD8400CC2960 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
 		560696A52949DDD200CC2960 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		560696A72949E1CF00CC2960 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		567B3619294B0AD800BEEE6A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		567B361C294B26CF00BEEE6A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		567B361F294B305900BEEE6A /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		56CDCC79294AE947009B1451 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		56CDCC7C294AF424009B1451 /* APIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseModel.swift; sourceTree = "<group>"; };
+		56CDCC7E294AF42E009B1451 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B2FFF8B3EB514C818C31135B /* Pods_JetDevsHomeWork_JetDevsHomeWorkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetDevsHomeWork_JetDevsHomeWorkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3EC5ABA8B83EB7FC725CD65 /* Pods-JetDevsHomeWorkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDevsHomeWorkTests.release.xcconfig"; path = "Target Support Files/Pods-JetDevsHomeWorkTests/Pods-JetDevsHomeWorkTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB6150528480C26B23B54A3E /* Pods-JetDevsHomeWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDevsHomeWork.debug.xcconfig"; path = "Target Support Files/Pods-JetDevsHomeWork/Pods-JetDevsHomeWork.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +188,8 @@
 		4E677BCC272B827F006E325E /* JetDevsHomeWork */ = {
 			isa = PBXGroup;
 			children = (
+				56CDCC7B294AF3FC009B1451 /* Model */,
+				56CDCC78294AE854009B1451 /* Service */,
 				560696972949BF1700CC2960 /* Login */,
 				4E677C12272B860A006E325E /* Common */,
 				4E677C01272B8367006E325E /* Account */,
@@ -229,8 +243,7 @@
 		4E677C01272B8367006E325E /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				4E677C07272B83DD006E325E /* Views */,
-				4E677C06272B83D5006E325E /* ViewModel */,
+				567B361B294B26BE00BEEE6A /* ViewModel */,
 				4E677C05272B83CA006E325E /* ViewController */,
 			);
 			path = Account;
@@ -252,20 +265,6 @@
 				4E677C0F272B8455006E325E /* AccountViewController.xib */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		4E677C06272B83D5006E325E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		4E677C07272B83DD006E325E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		4E677C12272B860A006E325E /* Common */ = {
@@ -313,6 +312,7 @@
 		4E677C4927323092006E325E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				567B361E294B304400BEEE6A /* Date */,
 				5606969F2949D9E600CC2960 /* UIColor */,
 				4E677C4A273230A4006E325E /* UIFont */,
 			);
@@ -361,6 +361,40 @@
 				560696A72949E1CF00CC2960 /* PasswordViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		567B361B294B26BE00BEEE6A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				567B361C294B26CF00BEEE6A /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		567B361E294B304400BEEE6A /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				567B361F294B305900BEEE6A /* Date+Extension.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		56CDCC78294AE854009B1451 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				56CDCC79294AE947009B1451 /* APIService.swift */,
+				567B3619294B0AD800BEEE6A /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		56CDCC7B294AF3FC009B1451 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56CDCC7C294AF424009B1451 /* APIResponseModel.swift */,
+				56CDCC7E294AF42E009B1451 /* UserModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C87474AC52CF468FB6DCCA19 /* Pods */ = {
@@ -672,9 +706,15 @@
 				560696A12949DA0500CC2960 /* UIColor+Extension.swift in Sources */,
 				4E677C4C273230E5006E325E /* UIFont+JetDevs.swift in Sources */,
 				5606969A2949BF7100CC2960 /* LoginViewController.swift in Sources */,
+				56CDCC7D294AF424009B1451 /* APIResponseModel.swift in Sources */,
+				56CDCC7A294AE947009B1451 /* APIService.swift in Sources */,
 				4E677C15272B8650006E325E /* Constants.swift in Sources */,
+				567B361A294B0AD800BEEE6A /* UserService.swift in Sources */,
 				4E677BCE272B827F006E325E /* AppDelegate.swift in Sources */,
+				567B361D294B26CF00BEEE6A /* UserViewModel.swift in Sources */,
+				56CDCC7F294AF42E009B1451 /* UserModel.swift in Sources */,
 				4E677C18272B88A6006E325E /* HomeViewController.swift in Sources */,
+				567B3620294B305900BEEE6A /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

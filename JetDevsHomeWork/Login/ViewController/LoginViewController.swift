@@ -15,12 +15,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: MDCOutlinedTextField!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     let viewModel = LoginViewModel()
     let disposeBag = DisposeBag()
+    var userViewModel: UserViewModel?
     
     var isValidEmail = false
     var isValidPassword = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -30,7 +34,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTap(_ sender: UIButton) {
         if self.viewModel.validateCredentials() {
-            print("Validate")
+            self.viewModel.loginUser()
         }
     }
     
@@ -113,17 +117,35 @@ class LoginViewController: UIViewController {
     }
     
     private func callBacks() {
-        // Success
-        viewModel.isSuccess.asObservable()
-            .bind { _ in
-            
+        // Api calling
+        viewModel.isLoading.asObservable()
+            .bind { isLoading in
+                self.loadingView.isHidden = !isLoading
+                if isLoading {
+                    self.activityIndicatorView.startAnimating()
+                } else {
+                    self.activityIndicatorView.stopAnimating()
+                }
             }
             .disposed(by: disposeBag)
-        
+        // Success
+        viewModel.userModel.asObservable()
+            .bind { user in
+                if let user = user {
+                    self.userViewModel?.model.accept(user)
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+            .disposed(by: disposeBag)
         // Errors
         viewModel.errorMessage.asObservable()
             .bind { errorMessage in
                 print(errorMessage)
+                if !errorMessage.isEmpty {
+                    Utility.showAlert(controller: self, message: errorMessage) {
+                        // Do any on api call error
+                    }
+                }
             }
             .disposed(by: disposeBag)
         

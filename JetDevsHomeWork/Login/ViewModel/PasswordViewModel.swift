@@ -9,7 +9,7 @@ import Foundation
 import RxCocoa
 
 class PasswordViewModel: ValidateViewModel {
-    var errorMessage: String = "Please enter valid Password"
+    var errorMessage: String = "Password lenght should be between 6 to 12 "
     
     var data: BehaviorRelay<String> = BehaviorRelay(value: "")
     

@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.6.4)
   - Kingfisher (7.1.0)
   - MaterialComponents (124.2.0):
     - MaterialComponents/ActionSheet (= 124.2.0)
@@ -655,6 +656,7 @@ PODS:
   - SwiftLint (0.44.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Kingfisher
   - MaterialComponents
   - RxCocoa
@@ -664,6 +666,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Kingfisher
     - MaterialComponents
     - MDFInternationalization
@@ -677,6 +680,7 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   Kingfisher: cdabaf49be7ee7cc124f0f276b355edf61903cf8
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
@@ -689,6 +693,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: e96c0a8c770c7ebbc4d36c55baf9096bb65c4584
 
-PODFILE CHECKSUM: 1c7409ab03ce34781f459a6077addf3c321deb5e
+PODFILE CHECKSUM: f00f48886be67127b757c5b8f2da72eea4e81281
 
 COCOAPODS: 1.11.3

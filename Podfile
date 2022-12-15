@@ -10,6 +10,7 @@ target 'JetDevsHomeWork' do
   pod 'SnapKit'
   pod 'MaterialComponents'
   pod 'RxCocoa'
+  pod 'Alamofire'
 
   target 'JetDevsHomeWorkTests' do
     inherit! :search_paths
