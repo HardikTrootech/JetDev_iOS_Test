@@ -10,6 +10,7 @@ import RxCocoa
 import RxSwift
 
 protocol ValidateViewModel {
+    
     var errorMessage: String { get }
     var data: BehaviorRelay<String> { get set }
     var errorValue: BehaviorRelay<String> { get set }
@@ -18,6 +19,7 @@ protocol ValidateViewModel {
 }
 
 class LoginModel {
+    
     var email = ""
     var password = ""
     
@@ -29,6 +31,7 @@ class LoginModel {
 }
 
 class LoginViewModel {
+    
     let model: LoginModel = LoginModel()
     let disposeBag = DisposeBag()
     

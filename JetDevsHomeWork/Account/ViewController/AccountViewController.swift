@@ -43,7 +43,7 @@ class AccountViewController: UIViewController {
     
     private func configureUserData(_ user: UserModel?) {
         if let user = user {
-            self.nameLabel.text = user.userName ?? "Username"
+            self.nameLabel.text = user.userName ?? ("Username")
             self.daysLabel.text = user.displayCreatedAt
             if let imagePath = user.userProfileUrl, let url = URL(string: imagePath) {
                 self.headImageView.kf.setImage(

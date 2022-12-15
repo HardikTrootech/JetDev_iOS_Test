@@ -10,6 +10,7 @@ import RxCocoa
 import RxSwift
 
 class UserViewModel {
+    
     let model: BehaviorRelay<UserModel?> = BehaviorRelay<UserModel?>(value: nil)
     let disposeBag = DisposeBag()
 }

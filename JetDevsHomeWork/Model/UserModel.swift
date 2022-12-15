@@ -8,11 +8,12 @@
 import Foundation
 
 struct UserModel: Codable {
+    
     var userId: Int?
     var userName: String?
     var userProfileUrl: String?
     var createdAt: String?
-    var displayCreatedAt:String {
+    var displayCreatedAt: String {
         if let createdAt = createdAt {
             let date = Utility.getDateFromString(string: createdAt)
             return "Created \(Utility.getTimeAgo(date: date))"

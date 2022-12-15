@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    static let textFieldBorder: UIColor = UIColor(named: "text_field_border")!
-    static let loginBtnActive: UIColor = UIColor(named: "login_btn_active")!
+    
+    static let textFieldBorder: UIColor = UIColor(named: "text_field_border") ?? (UIColor())
+    static let loginBtnActive: UIColor = UIColor(named: "login_btn_active") ?? (UIColor())
 }

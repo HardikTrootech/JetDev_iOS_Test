@@ -61,7 +61,7 @@ class APIService: NSObject {
                                 if let data = response.data {
                                     if let dict = Utility.dataToJSON(data: data) as? [String: Any] {
                                         if let error = dict["errors"] as? [String] {
-                                            message = error.first ?? errorDefaultMessage
+                                            message = error.first ?? (errorDefaultMessage)
                                         }
                                     }
                                 }
@@ -82,7 +82,8 @@ class APIService: NSObject {
 }
 
 class Connectivity {
+    
     class var isConnectedToInternet: Bool {
-        return (NetworkReachabilityManager()?.isReachable) ?? false
+        return (NetworkReachabilityManager()?.isReachable) ?? (false)
     }
 }

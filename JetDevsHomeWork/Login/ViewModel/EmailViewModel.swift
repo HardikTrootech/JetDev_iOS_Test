@@ -9,6 +9,7 @@ import Foundation
 import RxCocoa
 
 class EmailViewModel: ValidateViewModel {
+    
     var errorMessage: String = "Please enter valid email"
     
     var data: BehaviorRelay<String> = BehaviorRelay(value: "")

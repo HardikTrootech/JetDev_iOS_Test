@@ -32,6 +32,7 @@ let errorDefaultMessage = "Something went worng"
 let errorRequestWasNotMatched = "Request was not matched"
 
 class Utility {
+    
     static func dataToJSON(data: Data) -> Any? {
        do {
            return try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
@@ -72,7 +73,7 @@ class Utility {
         title: String = "APP",
         message: String,
         buttonText: String = "Ok",
-        action: @escaping () -> ()
+        action: @escaping () -> Void
     ) {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -102,7 +103,7 @@ class Utility {
                 return "\(abs(date.years(from: currentDate))) year\((date.years(from: currentDate) > 1) ? "s": "") ago"
             }
             
-            if currentDate.months(from:  date) > 0 {
+            if currentDate.months(from: date) > 0 {
                 return "\(abs(date.months(from: currentDate))) month\((date.months(from: currentDate) > 1) ? "s": "") ago"
             }
             
